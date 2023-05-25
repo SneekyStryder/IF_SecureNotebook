@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
@@ -26,30 +24,42 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         setSize(400, 300);
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        saveButton.addActionListener(this);
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                text = notebookText.getText();
+                try {
+                    saveToFile(text);
+                    System.out.println(text);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
         setVisible(true);
-        Scanner scan = new Scanner("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\src\\saveFile.txt");
-        while (scan.hasNextLine()) {
-            text += scan.nextLine();
+        StringBuilder contentBuilder = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\saveFile.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                contentBuilder.append(line);
+                contentBuilder.append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        Files.deleteIfExists(Paths.get("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\src\\saveFile.txt"));
-        txtFile = new File("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\src\\saveFile.txt");
-        if(txtFile.createNewFile()){
-            System.out.println("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\src\\saveFile.txt File Created");
-        }else System.out.println("File C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\src\\saveFile.txt already exists");
-        saveToFile(text);
+        notebookText.append(contentBuilder.toString());
     }
 
     public void saveToFile(String text) throws IOException {
-        try {
-            FileWriter writer = new FileWriter("saveFile.txt");
-            writer.write(text);
-            writer.close();
-        }
-        catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter("saveFile.txt"));
+                writer.write(text);
+                writer.close();
+                JOptionPane.showMessageDialog(null, "File saved successfully.");
+            }
+            catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error saving file: " + e.getMessage());
+            }
     }
 
     @Override
