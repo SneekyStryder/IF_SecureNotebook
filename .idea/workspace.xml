@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae061415-14df-488f-a6f1-e21cfb894b2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ProgressbarWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProgressbarWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PasswordWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PasswordWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecureNotebookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProgressbarWindow.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProgressbarWindow.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecureNotebookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/saveFile.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "173",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "290",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>

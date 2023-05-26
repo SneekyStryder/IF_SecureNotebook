@@ -38,7 +38,7 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         });
         setVisible(true);
         StringBuilder contentBuilder = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\BT_3W2_01\\IdeaProjects\\IF_SecureNotebook\\saveFile.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("saveFile.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 contentBuilder.append(line);
