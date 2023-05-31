@@ -49,12 +49,17 @@ public class PasswordWindow extends JFrame {
             SwingUtilities.invokeLater(new Runnable() {
                 @Override
                 public void run() {
+                    SecureNotebookMenu secureNotebookMenu = new SecureNotebookMenu();
                     // Create an instance of the new program's frame
+                    /*
                     try {
-                        SecureNotebookWindow secureNotebook = new SecureNotebookWindow();
+                        SecureNotebookMenu secureNotebookMenu = new SecureNotebookMenu();
+                        // SecureNotebookWindow secureNotebook = new SecureNotebookWindow();
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+
+                     */
                     //SecureNotebookWindow.setVisible(true);
                 }
             });
