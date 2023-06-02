@@ -1,17 +1,18 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class SecureNotebookMenu extends JFrame implements ActionListener {
     private JPanel mainPanel;
-    private JButton button1;
+    private JButton textFile1Option;
     private JButton button2;
     private JButton button3;
     private JButton button4;
     private JButton button5;
     private JButton button6;
     private JButton quitButton;
+    private JScrollPane scrollPane;
 
     public SecureNotebookMenu() {
         createUIComponents();
@@ -23,28 +24,55 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
         setSize(400, 300);
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        //for (int i = 1; i <= 10; i++) {
-        JButton menuOption = new JButton("Menu Option " + 1);
-        menuOption.setAlignmentX(Component.CENTER_ALIGNMENT);
-        menuOption.setBounds(50, 50, 75, 35);
-        setSize(250, 200);
-        setLayout(null);
-        menuOption.addActionListener(new ActionListener() {
+        textFile1Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JButton button = (JButton) e.getSource();
-                JOptionPane.showMessageDialog(null, "Selected: " + button.getText());
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow();
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                // SecureNotebookWindow secureNotebook = new SecureNotebookWindow();
             }
         });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-        // Create a scroll pane and add the menu panel to it
-        JScrollPane scrollPane = new JScrollPane(mainPanel);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-        // Add the scroll pane to the frame
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-        // Display the frame
+            }
+        });
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Closing Notebook");
+                setVisible(false);
+            }
+        });
         setVisible(true);
     }
 
