@@ -6,11 +6,11 @@ import java.io.IOException;
 public class SecureNotebookMenu extends JFrame implements ActionListener {
     private JPanel mainPanel;
     private JButton textFile1Option;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JButton button6;
+    private JButton textFile6Option;
+    private JButton textFile5Option;
+    private JButton textFile4Option;
+    private JButton textFile3Option;
+    private JButton textFile2Option;
     private JButton quitButton;
     private JScrollPane scrollPane;
 
@@ -28,7 +28,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow();
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(1);
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -36,34 +36,59 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
                 // SecureNotebookWindow secureNotebook = new SecureNotebookWindow();
             }
         });
-        button2.addActionListener(new ActionListener() {
+        textFile2Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(2);
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
-        button3.addActionListener(new ActionListener() {
+        textFile3Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(3);
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
-        button4.addActionListener(new ActionListener() {
+        textFile4Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(4);
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
-        button5.addActionListener(new ActionListener() {
+        textFile5Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(5);
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
-        button6.addActionListener(new ActionListener() {
+        textFile6Option.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(6);
+                    setVisible(false);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
         quitButton.addActionListener(new ActionListener() {

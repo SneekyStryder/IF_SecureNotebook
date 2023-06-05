@@ -14,11 +14,11 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
     private File txtFile;
     private String text = "";
 
-    public SecureNotebookWindow() throws IOException {
-        createUIComponents();
+    public SecureNotebookWindow(int fileNum) throws IOException {
+        createUIComponents(fileNum);
     }
 
-    private void createUIComponents() throws IOException {
+    private void createUIComponents(int fileNum) throws IOException {
         setContentPane(mainPanel);
         setTitle("Secure Notebook");
         setSize(400, 300);
@@ -29,7 +29,7 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 text = notebookText.getText();
                 try {
-                    saveToFile(text);
+                    saveToFile(text, fileNum);
                     System.out.println(text);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -38,7 +38,7 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         });
         setVisible(true);
         StringBuilder contentBuilder = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("saveFile.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("saveFile" + fileNum + ".txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 contentBuilder.append(line);
@@ -50,9 +50,9 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         notebookText.append(contentBuilder.toString());
     }
 
-    public void saveToFile(String text) throws IOException {
+    public void saveToFile(String text, int fileNum) throws IOException {
             try {
-                BufferedWriter writer = new BufferedWriter(new FileWriter("saveFile.txt"));
+                BufferedWriter writer = new BufferedWriter(new FileWriter("saveFile" + fileNum + ".txt"));
                 writer.write(text);
                 writer.close();
                 JOptionPane.showMessageDialog(null, "File saved successfully.");
