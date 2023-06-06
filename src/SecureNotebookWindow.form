@@ -44,6 +44,7 @@
         </constraints>
         <properties>
           <background color="-1"/>
+          <font name="Verdana"/>
           <foreground color="-1"/>
           <text value="My Notebook"/>
         </properties>

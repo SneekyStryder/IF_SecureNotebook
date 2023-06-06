@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -24,6 +25,10 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         setSize(400, 300);
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        saveButton.setFont(new Font("Calibri", Font.PLAIN, 16));
+        saveButton.setBackground(new Color(235, 64, 52));
+        saveButton.setForeground(Color.white);
+        saveButton.setUI(new CustomButtonUI());
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
