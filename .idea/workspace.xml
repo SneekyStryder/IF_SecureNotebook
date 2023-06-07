@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae061415-14df-488f-a6f1-e21cfb894b2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecureNotebookMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookMenu.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecureNotebookMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecureNotebookWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecureNotebookWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecureNotebookWindow.java" afterDir="false" />
@@ -43,7 +42,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.SecureNotebookMenu">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="IF_SecureNotebook" />
@@ -60,8 +59,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.SecureNotebookMenu" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

@@ -12,19 +12,22 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
     private JButton saveButton;
     private JTextArea notebookText;
     private JLabel myNotebook;
+    private JLabel textFileName;
     private File txtFile;
     private String text = "";
 
-    public SecureNotebookWindow(int fileNum) throws IOException {
-        createUIComponents(fileNum);
+    public SecureNotebookWindow(int fileNum, String fileName, Color labelColor) throws IOException {
+        createUIComponents(fileNum, fileName, labelColor);
     }
 
-    private void createUIComponents(int fileNum) throws IOException {
+    private void createUIComponents(int fileNum, String fileName, Color labelColor) throws IOException {
         setContentPane(mainPanel);
         setTitle("Secure Notebook");
         setSize(400, 300);
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        textFileName.setText(fileName);
+        textFileName.setForeground(labelColor);
         saveButton.setFont(new Font("Calibri", Font.PLAIN, 16));
         saveButton.setBackground(new Color(235, 64, 52));
         saveButton.setForeground(Color.white);

@@ -32,7 +32,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(1);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(1, textFile1Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -48,7 +48,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(2);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(2, textFile2Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -63,7 +63,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(3);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(3, textFile3Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -78,7 +78,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(4);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(4, textFile4Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -93,7 +93,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(5);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(5, textFile5Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -108,7 +108,7 @@ public class SecureNotebookMenu extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(6);
+                    SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(6, textFile6Option.getText(), new Color(255, 255, 255));
                     setVisible(false);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
