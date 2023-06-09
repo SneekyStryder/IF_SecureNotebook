@@ -21,7 +21,8 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Verdana"/>
+          <font name="Verdana" size="22"/>
+          <foreground color="-1"/>
           <text value="Secure Notebook"/>
         </properties>
       </component>
@@ -30,7 +31,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 1"/>
+          <text value="General"/>
         </properties>
       </component>
       <component id="b0b58" class="javax.swing.JButton" binding="quitButton" default-binding="true">
@@ -46,7 +47,7 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 2"/>
+          <text value="School"/>
         </properties>
       </component>
       <component id="34710" class="javax.swing.JButton" binding="textFile3Option">
@@ -54,7 +55,7 @@
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 3"/>
+          <text value="Star Wars"/>
         </properties>
       </component>
       <component id="5a766" class="javax.swing.JButton" binding="textFile4Option">
@@ -62,7 +63,7 @@
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 4"/>
+          <text value="Music"/>
         </properties>
       </component>
       <component id="33b03" class="javax.swing.JButton" binding="textFile5Option">
@@ -70,7 +71,7 @@
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 5"/>
+          <text value="Stories"/>
         </properties>
       </component>
       <component id="554d6" class="javax.swing.JButton" binding="textFile6Option">
@@ -78,7 +79,7 @@
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Text File 6"/>
+          <text value="Secrets"/>
         </properties>
       </component>
       <hspacer id="af1ef">

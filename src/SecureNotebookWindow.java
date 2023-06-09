@@ -3,9 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Scanner;
 
 public class SecureNotebookWindow extends JFrame implements ActionListener {
     private JPanel mainPanel;
@@ -13,6 +10,7 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
     private JTextArea notebookText;
     private JLabel myNotebook;
     private JLabel textFileName;
+    private JButton exitButton;
     private File txtFile;
     private String text = "";
 
@@ -29,19 +27,32 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
         textFileName.setText(fileName);
         textFileName.setForeground(labelColor);
         saveButton.setFont(new Font("Calibri", Font.PLAIN, 16));
-        saveButton.setBackground(new Color(235, 64, 52));
-        saveButton.setForeground(Color.white);
+        saveButton.setBackground(new Color(255, 255, 255));
+        saveButton.setForeground(Color.black);
         saveButton.setUI(new CustomButtonUI());
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 text = notebookText.getText();
                 try {
+                    saveButton.setBackground(new Color(52, 235, 88));
+                    saveButton.setForeground(Color.white);
                     saveToFile(text, fileNum);
                     System.out.println(text);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
+            }
+        });
+        exitButton.setFont(new Font("Calibri", Font.PLAIN, 16));
+        exitButton.setBackground(new Color(235, 64, 52));
+        exitButton.setForeground(Color.white);
+        exitButton.setUI(new CustomButtonUI());
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                SecureNotebookMenu secureNotebookMenu = new SecureNotebookMenu();
             }
         });
         setVisible(true);
@@ -73,5 +84,9 @@ public class SecureNotebookWindow extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+    }
+
+    public static void main(String[] args) throws IOException {
+        SecureNotebookWindow secureNotebookWindow = new SecureNotebookWindow(1, "test", new Color(255, 255, 255));
     }
 }
